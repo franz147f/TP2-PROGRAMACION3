@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link rel="stylesheet" href="estilos.css" media="all" >
+</head>
+<body>
+    <H1> Inscripciones Activas</H1>
+    <table>
+        <tr>
+            
+            <th>Actividad</th>
+            <th>lugar</th>
+            <th>Dia</th>
+            <th>horario</th>
+            <th>Estado</th>
+        </tr>
+        <tr>
+            <td>Fútbol</td>
+            <td>Cancha general</td>
+            <td>Miércoles</td>
+            <td>19:00</td>
+            <td>Activa</td>
+        </tr>
+   
+        <tr>
+            <td>Vóley</td>
+            <td>Cancha techada</td>
+            <td>Viernes</td>
+            <td>17:00</td>
+            <td>Activa</td>
+        </tr>
+
+    </table>
+    <a href="#">cancelar inscripcion</a>
+    <footer> Deportes Unca 2026</footer>
+    
+    <script> 
+        const parametros =new URLSearchParams(window.location.search)
+        const dniIngresado= parametros.get('dni')
+        const actividadIngresado= parametros.get('actividad')
+        const lugarIngresado= parametros.get('lugar')
+        const diaIngresado= parametros.get('dia')
+        const horarioIngresado=parametros.get('horario')
+        if (dniIngresado) {
+            document.getElementById('celda-dni').textContent=dniIngresado;  
+        }
+        if (actividadIngresado) {
+            document.getElementById('celda-actividad').textContent=actividadIngresado;
+            document.getElementById('estado').textContent="activo"   
+        }
+        if (lugarIngresado) {
+            document.getElementById('celda-lugar').textContent=lugarIngresado;  
+        }
+        if (diaIngresado) {
+            document.getElementById('celda-dia').textContent=diaIngresado;  
+        }
+        if (horarioIngresado) {
+            document.getElementById('celda-horario').textContent=horarioIngresado;
+            document.getElementById('estado').textContent="activo"  
+        }
+    
+    </script>
+</body>
+</html>
