@@ -59,3 +59,30 @@ img, iframe {
     color: #ffc300;
     font-weight: bold;
 }
+
+button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+button[type="reset"] {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align: center;
+    color: #788189;
+    border-top: 1px solid #001d3d;
+}

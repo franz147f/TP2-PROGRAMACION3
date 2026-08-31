@@ -16,7 +16,7 @@
             <fieldset>
                 <legend> Actividad </legend>
                 <label for="campo-actividad"> Actividad </label>
-                <select id="campo-actividad" name="actividad" disabled>
+                <select id="campo-actividad" name="actividad">
                     <option value="futbol">Futbol</option>
                     <option value="voley">Voley</option>
                     <option value="basquet">Basquet</option>
@@ -24,7 +24,7 @@
                 </select>
                 <br>
                 <label for="lugar"> Lugar </label>
-                <select id="lugar" name="lugar" disabled >
+                <select id="lugar" name="lugar">
                     <option value="cancha">Cancha principal</option>
                     <option value="polideportivo">Polideportivo</option>
                     
@@ -88,12 +88,12 @@
                 <br>
                 <label for="observacion"> observaciones</label>
                 <br>
-                <textarea name="o" id="observacion" cols="50" rows="4"></textarea>
+                <textarea name="observaciones" id="observacion" cols="50" rows="4"></textarea>
             </fieldset>
             <hr>
             <fieldset>
                 <legend> terminos y condiciones</legend>
-                <input type="checkbox" name="terminos y condiciones" id="TYC" value="aceptado" required>
+                <input type="checkbox" name="terminos" id="TYC" value="aceptado" required>
                 <label for="TYC">Acepto los términos y condiciones de inscripción</label>
             </fieldset>
             <br>
@@ -101,17 +101,7 @@
         <button type="reset">Cancelar</button>
     </form>
     </div>
-    <script>
-        const parametros =new URLSearchParams(window.location.search)
-        const actividadIngresada= parametros.get('actividad')
-        const lugarIngresado= parametros.get('lugar')
-        if (actividadIngresada) {
-            document.getElementById('campo-actividad').value=actividadIngresada;  
-        }
-        if (lugarIngresado) {
-            document.getElementById('lugar').value=lugarIngresado;  
-        }
-    </script>
+    
 
 <footer>Deportes Unca -2026</footer>
 
